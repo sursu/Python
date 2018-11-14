@@ -1,0 +1,49 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Solution",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-O3",
+                "hello.cpp",
+                "-o",
+                "hello.exe"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "silent",
+                // "panel": "new"
+            }
+        },
+        {
+            "label": "Build Solution",
+            "type": "shell",
+            "command": "clang++",
+            "args": [
+                "-g",
+                "-O3",
+                "hello.cpp",
+                "-o",
+                "hello.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
